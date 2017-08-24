@@ -1,0 +1,68 @@
+baseurl = "https://andela-skanyi.github.io/blog"
+DefaultContentLanguage = "en"
+title = "Kanyi Blog"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+disqusShortname = "kanyi"
+#googleAnalytics = "XXX"
+
+[Params]
+  subtitle = "Build Break Rebuild"
+  logo = "img/avatar-icon.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "Stephen Kanyi"
+#   website = "yourwebsite.com"
+  email = "tokanyi@gmail.com"
+#   facebook = "username"
+#   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  github = "andela-skanyi"
+#   gitlab = "username"
+  twitter = "StephenKanyiW"
+#   reddit = "username"
+#   linkedin = "username"
+#   xing = "username"
+#   stackoverflow = "users/XXXXXXX/username"
+
+[[menu.main]]
+    name = "Blog"
+    url = "https://andela-skanyi.github.io/blog"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 3
+
+[[menu.main]]
+    name = "DevOps"
+    url = "devops/"
+    weight = 2
+
+[[menu.main]]
+    name = "Security"
+    url = "cyber-security/"
+    weight = 2
+
+[[menu.main]]
+    name = "Development"
+    url = "development/"
+    weight = 2

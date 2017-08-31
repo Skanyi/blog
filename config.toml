@@ -1,4 +1,4 @@
-baseurl = "https://andela-skanyi.github.io/blog"
+baseurl = "https://andela-skanyi.github.io/blog/"
 DefaultContentLanguage = "en"
 title = "Kanyi Blog"
 theme = "beautifulhugo"
@@ -8,7 +8,7 @@ pygmentCodeFences = true
 disqusShortname = "kanyi"
 
 [Params]
-  subtitle = "Build Break Rebuild"
+  subtitle = "Build Automate Secure"
   logo = "img/me.jpg"
   favicon = "img/avatar-icon.png"
   dateFormat = "January 2, 2006"

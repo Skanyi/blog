@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tokanyi@gmail.com (Stephen Kanyi)</managingEditor>
     <webMaster>tokanyi@gmail.com (Stephen Kanyi)</webMaster>
-    <lastBuildDate>Fri, 25 Aug 2017 13:09:32 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 31 Aug 2017 18:45:52 +0300</lastBuildDate>
     
 	<atom:link href="https://andela-skanyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Natas Writeup</title>
+      <link>https://andela-skanyi.github.io/blog/cyber-security/natas-writeup/</link>
+      <pubDate>Thu, 31 Aug 2017 18:45:52 +0300</pubDate>
+      <author>tokanyi@gmail.com (Stephen Kanyi)</author>
+      <guid>https://andela-skanyi.github.io/blog/cyber-security/natas-writeup/</guid>
+      <description>This is my attempt to do natas CTF.</description>
+    </item>
+    
+    <item>
+      <title>Configure Task With Ansible</title>
+      <link>https://andela-skanyi.github.io/blog/devops/configure-task-with-ansible/</link>
+      <pubDate>Thu, 31 Aug 2017 18:22:47 +0300</pubDate>
+      <author>tokanyi@gmail.com (Stephen Kanyi)</author>
+      <guid>https://andela-skanyi.github.io/blog/devops/configure-task-with-ansible/</guid>
+      <description>We are going to use ansible to aoutomate the server setup.</description>
+    </item>
+    
+    <item>
+      <title>Automated Work Flow</title>
+      <link>https://andela-skanyi.github.io/blog/devops/automated-work-flow/</link>
+      <pubDate>Thu, 31 Aug 2017 18:21:43 +0300</pubDate>
+      <author>tokanyi@gmail.com (Stephen Kanyi)</author>
+      <guid>https://andela-skanyi.github.io/blog/devops/automated-work-flow/</guid>
+      <description>We automate the development workflow from development to production</description>
+    </item>
     
     <item>
       <title>About me</title>

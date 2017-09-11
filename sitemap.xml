@@ -3,11 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/cyber-security/</loc>
-  </url>
-  
-  <url>
-    <loc>https://andela-skanyi.github.io/blog/development/</loc>
+    <loc>https://andela-skanyi.github.io/blog/page/about/</loc>
+    <lastmod>2017-08-25T13:09:32+03:00</lastmod>
   </url>
   
   <url>
@@ -15,7 +12,7 @@
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/page/about/</loc>
+    <loc>https://andela-skanyi.github.io/blog/development/</loc>
   </url>
   
   <url>
@@ -24,12 +21,18 @@
   </url>
   
   <url>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/</loc>
+  </url>
+  
+  <url>
     <loc>https://andela-skanyi.github.io/blog/</loc>
+    <lastmod>2017-08-25T13:09:32+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://andela-skanyi.github.io/blog/page/</loc>
+    <lastmod>2017-08-25T13:09:32+03:00</lastmod>
     <priority>0</priority>
   </url>
   

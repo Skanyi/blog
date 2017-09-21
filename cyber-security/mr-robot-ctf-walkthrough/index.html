@@ -5,12 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Automated Work Flow</title>
-  <meta property="og:title" content="Automated Work Flow" />
-  <meta name="twitter:title" content="Automated Work Flow" />
-  <meta name="description" content="We automate the development workflow from development to production">
-  <meta property="og:description" content="We automate the development workflow from development to production">
-  <meta name="twitter:description" content="We automate the development workflow from development to production">
+  <title>Mr Robot CTF Walkthrough</title>
+  <meta property="og:title" content="Mr Robot CTF Walkthrough" />
+  <meta name="twitter:title" content="Mr Robot CTF Walkthrough" />
+  <meta name="description" content="Now back to the CTF:    Capturing the first flag: Capturing the 2nd flag: Captured the 3rd Flag:     Mr Robot ctf is created from the popular tv show.
+This was my first attempt to do a CTF, and indeed it was not a walk in the park. Disclaimer, this might not be the efficient way to have solved the CTF and might have many repetitions or unnecessary steps, but it worked for me.">
+  <meta property="og:description" content="Now back to the CTF:    Capturing the first flag: Capturing the 2nd flag: Captured the 3rd Flag:     Mr Robot ctf is created from the popular tv show.
+This was my first attempt to do a CTF, and indeed it was not a walk in the park. Disclaimer, this might not be the efficient way to have solved the CTF and might have many repetitions or unnecessary steps, but it worked for me.">
+  <meta name="twitter:description" content="Now back to the CTF:    Capturing the first flag: Capturing the 2nd flag: Captured the 3rd Flag:     Mr Robot ctf is created from the popular tv show.
+This was my first attempt to do a CTF, and indeed …">
   <meta name="author" content="Stephen Kanyi"/>
   <link href='https://andela-skanyi.github.io/blog/img/avatar-icon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://andela-skanyi.github.io/blog/img/me.jpg" />
@@ -18,12 +21,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@StephenKanyiW" />
   <meta name="twitter:creator" content="@StephenKanyiW" />
-  <meta property="og:url" content="https://andela-skanyi.github.io/blog/devops/automated-work-flow/" />
+  <meta property="og:url" content="https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kanyi Blog" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="https://andela-skanyi.github.io/blog/devops/automated-work-flow/" />
+  <link rel="canonical" href="https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/" />
   <link rel="alternate" href="https://andela-skanyi.github.io/blog/index.xml" type="application/rss+xml" title="Kanyi Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -166,8 +169,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="devops-heading">
-              <h1>Automated Work Flow</h1>
+            <div class="cyber-security-heading">
+              <h1>Mr Robot CTF Walkthrough</h1>
                 
                 
             </div>
@@ -183,16 +186,169 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>We automate the development workflow from development to production</p>
+        <nav>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#now-back-to-the-ctf">Now back to the CTF:</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#capturing-the-first-flag">Capturing the first flag:</a></li>
+<li><a href="#capturing-the-2nd-flag">Capturing the 2nd flag:</a></li>
+<li><a href="#captured-the-3rd-flag">Captured the 3rd Flag:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<p>Mr Robot ctf is created from the popular tv show.</p>
+
+<p>This was my first attempt to do a CTF, and indeed it was not a walk in the park. Disclaimer, this might not be the efficient way to have solved the CTF and might have many repetitions or unnecessary steps, but it worked for me. If you have a better way to do it, please feel free to suggest them</p>
+
+<h6 id="now-back-to-the-ctf">Now back to the CTF:</h6>
+
+<h3 id="capturing-the-first-flag">Capturing the first flag:</h3>
+
+<p>I started both the VM box and my kali and man they could not communicate. Had to read around and realized that they both had to be on the same network. I shut down both machines and set them to Host-only Adapter and fired them up again.</p>
+
+<p>Next i run <code>arp-scan -l</code> to generate addresses from network interface configuration and the guessed machine is most likely located at 192.168.56.102.</p>
+
+<p>Now with the ip, I used <em>Sparta to scan</em> the it. At first i just did not even know where to look or what to look for. And boom, I was in an interesting section that had some info, reading through i saw some files like <code>robot.txt</code>.</p>
+
+<p><img src="/blog/images/sparta.png" alt="" /></p>
+
+<p>Accessing the ip on the browser, and it was the best thing i have ever seen. Felt awesome but still haven’t captured the flag, but was making progress. Run the commands there and was stranded again. Went back to my sparta scan and now i had several files but no clue on how to read them. Quick search on google suggests that i can pass the filename as a parameter on the url. I tried 192.168.56.10/robot.txt and there was my first key file.</p>
+
+<p><img src="/blog/static/images/robottxt.png" alt="" title="Sparta scan results" />
+Was feeling adventurous and decided to pass the key file name as parameter too, the key was there on plain text.</p>
+
+<p><img src="/blog/images/key1.png" alt="" /></p>
+
+<h3 id="capturing-the-2nd-flag">Capturing the 2nd flag:</h3>
+
+<p>From there on i was checking all the files including the license and readme files. The license file had an base64 encode string.
+<code>ZWxsaW90OkVSMjgtMDY1Mgo=</code></p>
+
+<p>Decoded this with</p>
+
+<p><code>echo 'ZWxsaW90OkVSMjgtMDY1Mgo=' | base64 --decode</code></p>
+
+<p>And got</p>
+
+<p><code>elliot:ER28-0652</code></p>
+
+<p>This looked like a username and password but where do i use them.</p>
+
+<p>Taking a closer look at the Sparta logs i realised it was a Wordpress site i was dealing with. Tried the /wp-login and i had a login page. I tried my username and password and just like that i was in.</p>
+
+<p><img src="/blog/images/wp-login.png" alt="" /></p>
+
+<p>A quick check on the site i didn&rsquo;t know what to look for. Now the question was how do i listen to connections to the server. And i was back to google, on my quest i stumble on php-reverse-shell script that i can upload on the WP server. Reading its description and what it is designed to do and dear this is what i was looking for. (changed the ip and port)</p>
+
+<p><img src="/blog/images/php-reverse-shell.png" alt="" /></p>
+
+<p>I changed the 404 template with my shell script. I then started netcat listener with</p>
+
+<p><code>nc -lvp 2227</code></p>
+
+<p>The port is the same as the one set on reverse script.</p>
+
+<p>Then tried to access a page that did not exist, and there was my text that i set on the 404 page.</p>
+
+<p><img src="/blog/images/404.png" alt="" /></p>
+
+<p>More interesting things were happening on my terminal, the connection was established and the dollar sign was there waiting for me to enter commands.</p>
+
+<p>Started with a simple ls command and got awesome result, changed directory to few of them and then was in home directory, then robot directory.
+Doing ls, there was my second key.</p>
+
+<p>Tried:
+<code>cat key-2-of-3.txt</code></p>
+
+<p>But i got,
+<code>cat: key-2-of-3.txt: Permission denied.</code></p>
+
+<p>Tried
+<code>cat password.raw-md5</code></p>
+
+<p>And got better result
+<code>robot:c3fcd3d76192e4007dfb496cca67e13b</code></p>
+
+<p>Looked like a username and password again. Tried to access the vm box with user <code>robot</code> and password <code>c3fcd3d76192e4007dfb496cca67e13b</code>. It didn&rsquo;t work. Then i noticed the extension of the file is md5.</p>
+
+<p>Quick search on the net and was on <a href="https://md5hashing.net">https://md5hashing.net</a> site and all i had to do was paste my hash and wait. In just few seconds i had a decoded text <code>abcdefghijklmnopqrstuvwxyz</code>. Tried this and was able to login to the box.</p>
+
+<p><img src="/blog/images/decode.png" alt="" /></p>
+
+<p>But i needed to login in my kali, so i wanted to change the user to robot, <code>su robot</code> and there was another problem, su: must be run from a terminal. Now was totally confused because i thought i was on terminal.</p>
+
+<p><img src="/blog/images/su.png" alt="" /></p>
+
+<p>And was back to google again, and python came to rescue&hellip; learned that i could install pty with</p>
+
+<p><code>python -c 'import pty;pty.spawn(&quot;/bin/bash&quot;)'</code></p>
+
+<p>So went ahead and run the small python program and it did the trick. switched to user robot with the password obtained earlier.
+Tried the
+<code>cat key-2-of-3.txt</code></p>
+
+<p>And there was my second flag in plain text.</p>
+
+<p><img src="/blog/images/key2.png" alt="" /></p>
+
+<p>Now to the third flag.</p>
+
+<h3 id="captured-the-3rd-flag">Captured the 3rd Flag:</h3>
+
+<p>By now am happy with myself and am determined to get this done but problem is have no clue on where to start.</p>
+
+<p>I changed directory to the root path. A simple ls command and noticed there was a root directory, tried to change directory to root but permission denied.
+<code>sudo cd root</code> did not help either as robot was not in the #sudoer file. Now was curious to know what was on the root directory.</p>
+
+<p>Tried to change user to root but did not know the password of root. And was back to google on how to change the owners of the files. On my quest i realise that can find the suid files on the system, decided to try this and this command did do the trick,</p>
+
+<p><code>find / -perm +6000 -type f -exec ls -ld {} \;</code></p>
+
+<p>the result was huge and scrolling through i found an interesting bit that nmap is installed. Was curious on what i could do with it.</p>
+
+<p><img src="/blog/images/nmap.png" alt="" /></p>
+
+<p>Typed nmap on the terminal t see some of the available options that i had,</p>
+
+<p><code>nmap --interactive</code></p>
+
+<p>was interesting. Was stranded again as i did not know what commands to run.</p>
+
+<p>Typed h for help, and indeed it was helpful, i realised that i could run shell commands with ! option.</p>
+
+<p>Did my simple <code>!ls</code> and it worked. Tried <code>!cd root</code> which didn&rsquo;t work.</p>
+
+<p>Then did <code>!ls /root</code>, and there was my third key, what remained was how to read its content.</p>
+
+<p><img src="/blog/images/nmap-interactive.png" alt="" /></p>
+
+<p>I tried
+<code>!cat /root/key-3-of-3.txt</code></p>
+
+<p>And it did work and had my 3rd key in plain text.</p>
+
+<p><code>04787ddef27c3dee1ee161b21670b4e4</code></p>
+
+<p>Lesson Learned from the CTF. <em><code>Learn How To Use Google</code></em>.</p>
 
       </article>
 
       <ul class="pager blog-pager">
         
-        
-          <li class="next">
-            <a href="https://andela-skanyi.github.io/blog/devops/configure-task-with-ansible/" data-toggle="tooltip" data-placement="top" title="Configure Task With Ansible">Next Post &rarr;</a>
-          </li>
         
       </ul>
 

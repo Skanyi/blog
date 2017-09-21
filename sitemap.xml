@@ -3,18 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/cyber-security/natas-writeup/</loc>
-    <lastmod>2017-08-31T18:45:52+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://andela-skanyi.github.io/blog/devops/configure-task-with-ansible/</loc>
-    <lastmod>2017-08-31T18:22:47+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://andela-skanyi.github.io/blog/devops/automated-work-flow/</loc>
-    <lastmod>2017-08-31T18:21:43+03:00</lastmod>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</loc>
+    <lastmod>2017-09-21T18:45:52+03:00</lastmod>
   </url>
   
   <url>
@@ -24,7 +14,6 @@
   
   <url>
     <loc>https://andela-skanyi.github.io/blog/devops/</loc>
-    <lastmod>2017-08-31T18:22:47+03:00</lastmod>
   </url>
   
   <url>
@@ -38,12 +27,12 @@
   
   <url>
     <loc>https://andela-skanyi.github.io/blog/cyber-security/</loc>
-    <lastmod>2017-08-31T18:45:52+03:00</lastmod>
+    <lastmod>2017-09-21T18:45:52+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://andela-skanyi.github.io/blog/</loc>
-    <lastmod>2017-08-31T18:45:52+03:00</lastmod>
+    <lastmod>2017-09-21T18:45:52+03:00</lastmod>
     <priority>0</priority>
   </url>
   

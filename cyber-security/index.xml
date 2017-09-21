@@ -7,18 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tokanyi@gmail.com (Stephen Kanyi)</managingEditor>
     <webMaster>tokanyi@gmail.com (Stephen Kanyi)</webMaster>
-    <lastBuildDate>Thu, 31 Aug 2017 18:45:52 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 21 Sep 2017 18:45:52 +0300</lastBuildDate>
     
 	<atom:link href="https://andela-skanyi.github.io/blog/cyber-security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Natas Writeup</title>
-      <link>https://andela-skanyi.github.io/blog/cyber-security/natas-writeup/</link>
-      <pubDate>Thu, 31 Aug 2017 18:45:52 +0300</pubDate>
+      <title>Mr Robot CTF Walkthrough</title>
+      <link>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</link>
+      <pubDate>Thu, 21 Sep 2017 18:45:52 +0300</pubDate>
       <author>tokanyi@gmail.com (Stephen Kanyi)</author>
-      <guid>https://andela-skanyi.github.io/blog/cyber-security/natas-writeup/</guid>
-      <description>This is my attempt to do natas CTF.</description>
+      <guid>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</guid>
+      <description>Now back to the CTF:    Capturing the first flag: Capturing the 2nd flag: Captured the 3rd Flag:     Mr Robot ctf is created from the popular tv show.
+This was my first attempt to do a CTF, and indeed it was not a walk in the park. Disclaimer, this might not be the efficient way to have solved the CTF and might have many repetitions or unnecessary steps, but it worked for me.</description>
     </item>
     
   </channel>

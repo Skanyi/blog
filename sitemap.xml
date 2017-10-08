@@ -3,47 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/spydersec-challenge/</loc>
+    <lastmod>2017-10-08T09:29:58+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/mr-robot-ctf-walkthrough/</loc>
     <lastmod>2017-09-21T18:45:52+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/page/about/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/page/about/</loc>
     <lastmod>2017-08-25T13:09:32+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/devops/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/devops/</loc>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/development/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/development/</loc>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/categories/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/</loc>
+    <lastmod>2017-10-08T09:29:58+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://andela-skanyi.github.io/blog/cyber-security/</loc>
-    <lastmod>2017-09-21T18:45:52+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://andela-skanyi.github.io/blog/</loc>
-    <lastmod>2017-09-21T18:45:52+03:00</lastmod>
+    <lastmod>2017-10-08T09:29:58+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/page/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/page/</loc>
     <lastmod>2017-08-25T13:09:32+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andela-skanyi.github.io/blog/tags/</loc>
+    <loc>https://andela-skanyi.github.io/blog/cyber-security/tags/</loc>
     <priority>0</priority>
   </url>
   

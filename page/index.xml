@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Kanyi Blog</title>
-    <link>https://andela-skanyi.github.io/blog/cyber-security/page/</link>
+    <link>https://andela-skanyi.github.io/blog/page/</link>
     <description>Recent content in Pages on Kanyi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tokanyi@gmail.com (Stephen Kanyi)</managingEditor>
     <webMaster>tokanyi@gmail.com (Stephen Kanyi)</webMaster>
     <lastBuildDate>Fri, 25 Aug 2017 13:09:32 +0300</lastBuildDate>
     
-	<atom:link href="https://andela-skanyi.github.io/blog/cyber-security/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://andela-skanyi.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>https://andela-skanyi.github.io/blog/cyber-security/page/about/</link>
+      <link>https://andela-skanyi.github.io/blog/page/about/</link>
       <pubDate>Fri, 25 Aug 2017 13:09:32 +0300</pubDate>
       <author>tokanyi@gmail.com (Stephen Kanyi)</author>
-      <guid>https://andela-skanyi.github.io/blog/cyber-security/page/about/</guid>
+      <guid>https://andela-skanyi.github.io/blog/page/about/</guid>
       <description>My name is Stephen Kanyi.
 What else do you need to know?
 My History To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just read on what i do here.</description>

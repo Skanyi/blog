@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kanyi Blog</title>
-    <link>https://andela-skanyi.github.io/blog/cyber-security/</link>
+    <link>https://andela-skanyi.github.io/blog/</link>
     <description>Recent content on Kanyi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tokanyi@gmail.com (Stephen Kanyi)</managingEditor>
     <webMaster>tokanyi@gmail.com (Stephen Kanyi)</webMaster>
     <lastBuildDate>Sun, 08 Oct 2017 09:29:58 +0300</lastBuildDate>
     
-	<atom:link href="https://andela-skanyi.github.io/blog/cyber-security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://andela-skanyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SpyderSec Challenge</title>
-      <link>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/spydersec-challenge/</link>
+      <link>https://andela-skanyi.github.io/blog/cyber-security/spydersec-challenge/</link>
       <pubDate>Sun, 08 Oct 2017 09:29:58 +0300</pubDate>
       <author>tokanyi@gmail.com (Stephen Kanyi)</author>
-      <guid>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/spydersec-challenge/</guid>
+      <guid>https://andela-skanyi.github.io/blog/cyber-security/spydersec-challenge/</guid>
       <description>1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
 Accessed the IP on the browser
 I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&amp;rsquo;t know what to do with it.</description>
@@ -25,20 +25,20 @@ I then used dirb directory burster to find available directories. dirb http://19
     
     <item>
       <title>Mr Robot CTF Walkthrough</title>
-      <link>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/mr-robot-ctf-walkthrough/</link>
+      <link>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</link>
       <pubDate>Thu, 21 Sep 2017 18:45:52 +0300</pubDate>
       <author>tokanyi@gmail.com (Stephen Kanyi)</author>
-      <guid>https://andela-skanyi.github.io/blog/cyber-security/cyber-security/mr-robot-ctf-walkthrough/</guid>
+      <guid>https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/</guid>
       <description>Now back to the CTF:    Capturing the first flag: Capturing the 2nd flag: Captured the 3rd Flag:     Mr Robot ctf is created from the popular tv show.
 This was my first attempt to do a CTF, and indeed it was not a walk in the park. Disclaimer, this might not be the efficient way to have solved the CTF and might have many repetitions or unnecessary steps, but it worked for me.</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>https://andela-skanyi.github.io/blog/cyber-security/page/about/</link>
+      <link>https://andela-skanyi.github.io/blog/page/about/</link>
       <pubDate>Fri, 25 Aug 2017 13:09:32 +0300</pubDate>
       <author>tokanyi@gmail.com (Stephen Kanyi)</author>
-      <guid>https://andela-skanyi.github.io/blog/cyber-security/page/about/</guid>
+      <guid>https://andela-skanyi.github.io/blog/page/about/</guid>
       <description>My name is Stephen Kanyi.
 What else do you need to know?
 My History To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just read on what i do here.</description>

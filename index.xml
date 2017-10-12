@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tokanyi@gmail.com (Stephen Kanyi)</managingEditor>
     <webMaster>tokanyi@gmail.com (Stephen Kanyi)</webMaster>
-    <lastBuildDate>Sun, 08 Oct 2017 09:29:58 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 20:40:33 +0300</lastBuildDate>
     
 	<atom:link href="https://andela-skanyi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Network Security Man in the Middle(MITM) Attacks</title>
+      <link>https://andela-skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/</link>
+      <pubDate>Mon, 09 Oct 2017 20:40:33 +0300</pubDate>
+      <author>tokanyi@gmail.com (Stephen Kanyi)</author>
+      <guid>https://andela-skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/</guid>
+      <description>In this Article Will be trying to explain how to perform a MITM attack with bettercap + beef + metasploit.
+Disclaimer: The content shared below is meant for educational purposes and the writer is not responsible on what you decide to use it for.
+What Is MITM? This is when an attacker convince the target that he is the server and the server that he is the target. What this means is that all packets exchanged between the two, will pass through the attacker.</description>
+    </item>
     
     <item>
       <title>SpyderSec Challenge</title>

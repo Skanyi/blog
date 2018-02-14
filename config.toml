@@ -1,4 +1,4 @@
-baseurl = "https://andela-skanyi.github.io/blog/"
+baseurl = "https://Skanyi.github.io/blog/"
 DefaultContentLanguage = "en"
 title = "Kanyi Blog"
 theme = "beautifulhugo"

@@ -5,18 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>SpyderSec Challenge</title>
-  <meta property="og:title" content="SpyderSec Challenge" />
-  <meta name="twitter:title" content="SpyderSec Challenge" />
-  <meta name="description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta property="og:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta name="twitter:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I …">
+  <title>What Is DOS? How To Perform DOS? How To Defend Against DOS?</title>
+  <meta property="og:title" content="What Is DOS? How To Perform DOS? How To Defend Against DOS?" />
+  <meta name="twitter:title" content="What Is DOS? How To Perform DOS? How To Defend Against DOS?" />
+  <meta name="description" content="I recently dived into Denial of Service or well know as DOS course. In this blog I will be writing on what is DOS/DDOS?, how to perform DDOS? and how to prevent it?.
+What is DOS? As the name suggest, this is when an attacker make a service unavailable for legitimate users. You operate a delivery business that customers makes call to order their delivery, now the attacker makes the call and leave the line open and doesn&rsquo;t make an order.">
+  <meta property="og:description" content="I recently dived into Denial of Service or well know as DOS course. In this blog I will be writing on what is DOS/DDOS?, how to perform DDOS? and how to prevent it?.
+What is DOS? As the name suggest, this is when an attacker make a service unavailable for legitimate users. You operate a delivery business that customers makes call to order their delivery, now the attacker makes the call and leave the line open and doesn&rsquo;t make an order.">
+  <meta name="twitter:description" content="I recently dived into Denial of Service or well know as DOS course. In this blog I will be writing on what is DOS/DDOS?, how to perform DDOS? and how to prevent it?.
+What is DOS? As the name suggest, …">
   <meta name="author" content="Stephen Kanyi"/>
   <link href='https://Skanyi.github.io/blog/img/avatar-icon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://Skanyi.github.io/blog/img/logo.jpg" />
@@ -24,12 +21,12 @@ I then used dirb directory burster to find available directories. dirb http://19
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@StephenKanyiW" />
   <meta name="twitter:creator" content="@StephenKanyiW" />
-  <meta property="og:url" content="https://Skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <meta property="og:url" content="https://Skanyi.github.io/blog/cyber-security/what-is-dos-how-to-perform-dos-how-to-defend-against-dos/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kanyi Blog" />
 
   <meta name="generator" content="Hugo 0.30" />
-  <link rel="canonical" href="https://Skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <link rel="canonical" href="https://Skanyi.github.io/blog/cyber-security/what-is-dos-how-to-perform-dos-how-to-defend-against-dos/" />
   <link rel="alternate" href="https://Skanyi.github.io/blog/index.xml" type="application/rss+xml" title="Kanyi Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -173,7 +170,7 @@ I then used dirb directory burster to find available directories. dirb http://19
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="cyber-security-heading">
-              <h1>SpyderSec Challenge</h1>
+              <h1>What Is DOS? How To Perform DOS? How To Defend Against DOS?</h1>
                 
                 
             </div>
@@ -191,94 +188,90 @@ I then used dirb directory burster to find available directories. dirb http://19
       <article role="main" class="blog-post">
         
 
-<p><img src="/blog/images/spydersec/thechallenge.png" alt="" /></p>
+<p>I recently dived into Denial of Service or well know as DOS course. In this blog I will be writing on what is DOS/DDOS?, how to perform DDOS? and how to prevent it?.</p>
 
-<h3 id="1-flag">1 FLag:</h3>
+<h2 id="what-is-dos">What is DOS?</h2>
 
-<p>I used <code>netdiscover</code> to identify the IP of the machine.
-<code>192.168.0.27</code></p>
+<p>As the name suggest, this is when an attacker make a service unavailable for legitimate users. You operate a delivery business that customers makes call to order their delivery, now the attacker makes the call and leave the line open and doesn&rsquo;t make an order. The line stay opens for a while until you decide to hang up. The attacker make the call again, you hang up. The cycle continues keeping the line busy. Legitimate Customers trying to calls can&rsquo;t go through because the line is currently busy. Below is an illustration of the same.</p>
 
-<p>Accessed the IP on the browser</p>
+<p><img src="/blog/images/DOS/dos.png" alt="" /> Image Credit: <a href="http://resources.infosecinstitute.com/denial-of-service-attack/">resources.infosecinstitute.com</a></p>
 
-<p>I then used <code>dirb</code> directory burster to find available directories.
-<code>dirb http://192.168.0.27</code>
-<img src="/blog/images/spydersec/dirb.png" alt="" /></p>
+<h2 id="what-is-ddos">What is DDOS?</h2>
 
-<p>I found one directory, tried to access it but had no permissions.
-<img src="/blog/images/spydersec/denied.png" alt="" /></p>
+<p>This is a distributed dinial of service. As the name suggests, it is Distributed and more effective than DOS because the attack is coming from different sources. It can be coordinated and carried out by individuals that have the same motives or using botnets. Botnets is where we have attacker controlling other machine/PC called zombies(slaves) and issuing commands to them. Now instead of one attacker making call to your delivery business, you have multiple of them calling making it even harder for legitimate customers to reach you.</p>
 
-<p>The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.
-<img src="/blog/images/spydersec/clues.png" alt="" /></p>
+<p><code>DDOS is Not really hacking as it does not involve getting access to any target. This does not make it less of a problem becaues a business can loose millions when hit by DDOS.</code></p>
 
-<p>Inspecting the page, under cookies there was another url, tried to access it, but still had no permissions.
-<img src="/blog/images/spydersec/permissions.png" alt="" /></p>
+<p><img src="/blog/images/DOS/ddos.png" alt="" /> Image Credit: <a href="http://resources.infosecinstitute.com/denial-of-service-attack/">resources.infosecinstitute.com</a></p>
 
-<p>Took a step back to think of what i have so far, a script and a url that i cannot access. Decided to concentrate on the script as it might have a clue on how to access the url.</p>
+<h2 id="how-to-perform-ddos">How to Perform DDOS?</h2>
 
-<p>After a lot of googling on online tools that i can run my js script, i finally got <a href="http://matthewfl.com/unPacker.html">http://matthewfl.com/unPacker.html</a>. I used it to run the script. I got hexadecimal string. I removed the <code>:</code>.
-<img src="/blog/images/spydersec/unpack.png" alt="" /></p>
+<p>It is very easy for anyone to perform this kind of attacks even without technical know how due to available tools or even services that can be acquired cheaply.</p>
 
-<p>I tried to search for tools online to convert hexadecimal to text. I found <a href="http://www.convertstring.com/EncodeDecode/HexDecode">http://www.convertstring.com/EncodeDecode/HexDecode</a> which i used to convert to text. I later created my own python tool to convert this (I don&rsquo;t want to search for it online everytime). You can find the code here, <a href="https://github.com/andela-skanyi/Converter">Converter</a></p>
+<p>The attack can mainly target two layers of the OSI Model(Transport(4th layer which includes protocals like TCP, UDP and ICMP) and Application(7th layer which include HTTP)).</p>
 
-<p>Here I will use the tool for all the conversion.
-I copied the hex string to a file.
-<img src="/blog/images/spydersec/mulder.png" alt="" /></p>
+<h3 id="techniques">Techniques:</h3>
 
-<p>That looks like a file. Tried to access it with</p>
+<ol>
+<li><strong>Peer-to-peer attackes</strong> P2P networks are normally used used for file-sharing. The attacker uses the clients/users to redirect their connection to the target without their knowledge. <a href="https://pdfs.semanticscholar.org/9ad4/948e3843733b5fbbe24593cceaf8ccc0c1bd.pdf">This paper take a deeper look on P2P DDOS</a>.</li>
+<li><strong>HTTP flood attacks</strong> They are volumetric attacks that exploit legitimate <strong>HTTP GET or POST</strong> request to the server. The attack uses botnets to to effectively exhaust the resources of the target. Requests that requires more processing power on the server side are targeted to achive exhaustion of the server much quicker. Simply put, so many request are sent to the server at the same time that it cannot handle the request anymore even for legitimate users.</li>
+<li><strong>Slowloris</strong> As the name suggests, it is slow and low in bandwidth. It works by sending partial request to the server and keeping the connection open. It keep on continuously sending incomplete HTTP requests and server keeps on opening connection awaiting for the request to be completed. Eventually the server connections pool is full and can&rsquo;t accept additional request even from legitimate users.</li>
+<li><strong>Permanent DOS and Phlashing</strong> - This is replacing the firmware of the device with either one that is vulnerable to make the device unusable. It is commonly known as <strong>bricking</strong> the device.</li>
+</ol>
 
-<p><code>http://192.168.0.2/mulder.fbi</code></p>
+<h3 id="tools">Tools:</h3>
 
-<p><code>http://192.168.0.2/v/mulder.fbi</code></p>
+<p>Below are some of the tools that you can use to automate DDOS attacks. They are so easy to use, even the person with no technical knowledge can use them.</p>
 
-<p>And got request not found. Then i tried the previous url. I got a pop up to save a file. Looks like i have found my first flag.
- <img src="/blog/images/spydersec/download.png" alt="" /></p>
+<ol>
+<li>LOIC</li>
+<li>DosHTTP</li>
+<li>Sprut</li>
+</ol>
 
-<p>Saved the file.</p>
+<p>Most of these tools are marketed as stressers tools as there is a question about their legitimacy. There are services that do offer legitimate stress tests, <a href="loader.io">loader.io</a> is one of them.</p>
 
-<h3 id="2-flag">2 FLag:</h3>
+<h2 id="how-to-defend-against-ddos-attack">How to Defend Against DDOS Attack?</h2>
 
-<p>The file downloaded above was a video. Watched it with hope of finding a clue there. But there was none.
-According to the challenge, the next flag is a text file. <del>first flag (a downloadable file) which is required to find the second flag (a text file)</del>.</p>
+<p>Being prepared to deal with a DDOS attack is very important for your business. Since you cannot be sure on which DDOS attack will be directed to you, it is better to have a multi-faceted implementation that defend you from most if not all kind of DDOS attacks. Below I outline some of the options you can implement.</p>
 
-<p>Somehow the video has the clue to the second flag.</p>
+<p><strong>Absord attacks</strong> This is when your infrastructure is able to absorb the attacks without disrupting your normal users experience. The attack does not take your service down. <strong>Capacity &gt; Attacks</strong> You have the ability to scale the infrustructure easily. With this age of cloud, scaling your infratructure resources can be done easily. This is not all you need as an attack can be massive but it does give you time to explore the attack and mitigate the impact. It is also expensive to maintain and you will need to identify malicious traffic and block them.</p>
 
-<p>I have heard that one can hide a message in another file as a secret method of communication. From what i understand, one can mount a file into another file with a key that will be used to decrypt the file. Which means only people who can rea/find the mounted file are those who have the keys.</p>
+<p><strong>Traffic Reputation</strong> It is important to understand how your normal traffic look like, where does it come from and so on. This way, you can easily identify when traffic that you  not used to hit your server. You can use traffic reputation to block traffic you think is malicious depending on the scale of deviation from your normal traffic pattern you consider dangerous.</p>
 
-<p>I googled on wome of the tools that can be used to encrypt/decrypt data in a file. I found <code>Veracrypt</code> which was interesting.
-I followed <a href="http://www.linuxandubuntu.com/home/encrypt-data-in-linux-with-veracrypt-an-alternative-to-truecrypt">this</a> guide to install it and learned the basics on how to use it.</p>
+<p><strong>Network level defense</strong> Blocking all malicious traffic at network infrastructure level by disabling all unused ports, blocking unnecessary protocols and filtering ingress traffic. We can also implement <strong>blackholing</strong> - a technique that directs the traffic somewhere else without sending a response back. From there, we can analyze the requests to understand the attack better.  A major limitation to this defense is that it only works if network is not saturated with data and have enough capacity.</p>
 
-<p>Trying to mount the file to a disk but it required a password which I don&rsquo;t have at the moment.
-<img src="/blog/images/spydersec/mount.png" alt="" /></p>
+<p><strong>Application Level Defenses</strong> Sometimes malicious traffic can pass through the network defenses as it might be targeting HTTP. This is where devices like WAF(Web Application Firewall) come in handy. They have all the rules that to inspect the HTTP request to determine malicious traffic and block them. It is very important that you able to inspect HTTPS traffic as well as the attack can be over HTTPS.</p>
 
-<p>Was back to page source to see if I missed the password there. There were two images there. I used exiftool that scan an image and extract all the info about the image. SpyderSecLogo.png had nothing unusual about the image content, but the Challenge.png had a hexadecimal on the comment field.
-<img src="/blog/images/spydersec/comment.png" alt="" /></p>
+<p>Another defense here is minimizing the attack surface area. What this means is that, any resource that doesn&rsquo;t need to be public, keep it in the private network of your infrustructure.</p>
 
-<p>Copied the the hex to a file, and removed the <code>:</code>. Used my tool again to do the conversion. I got another hex, rerun the app and got a base64 encoded string.
-I expanded my tool to decode and encode base64. I used it to decode and got a text string that looked like a password.
-<img src="/blog/images/spydersec/decode.png" alt="" /></p>
+<p>Sandboxing your application features can also help and minimize the impact of the attack. Attack on a certain feature of the application will only affect the server that serves that feature leaving all the other features functional to the real users.</p>
 
-<p>Back to veracrypt and used the text as the password.
-<img src="/blog/images/spydersec/veracrypt.png" alt="" /></p>
+<p><strong>AnyCast Implementation</strong> - a webserver has different nodes that serves the clients from all over the world improving on the performance and also mitigating on the DOS attacks. Attack from one region will only affect nodes in that region alone. Even if the attack is distributed, the server will not be hit by all the traffic but the nodes will be. We can then implement all the above defenses on node level which improves defense against DDOS.</p>
 
-<p>It mounted 38kb to the disk. Double clicked on the disk to open. It had a Flag.txt file. Opened the file and got a congratulations message. I had found the second flag.
-<img src="/blog/images/spydersec/flag.png" alt="" /></p>
+<h2 id="preparing-for-ddos-resilience">Preparing For DDOS Resilience</h2>
 
-<h3 id="conclusion">Conclusion:</h3>
+<p>Being prepared is very important for your business. Here is a checklist to ensure you ready.</p>
 
-<p>The CTF was awesome and challenging enough. I got to learn some of the tools that i added to my arsenal. I will be exploring more on how to hide messages in another file.</p>
+<ol>
+<li>Have you implemented DDOS strategy?</li>
+<li>HAve you tested your strategy?</li>
+<li>Do you have a crisis management plan?</li>
+<li>What will a succsseful DDOS cost you?</li>
+</ol>
+
+<p>Thanks to <a href="https://www.troyhunt.com/">Troy Hunt</a> course on <a href="https://app.pluralsight.com/library/courses/ethical-hacking-denial-service">pluralsight</a>.</p>
+
+<p>The material shared here is solely meant for learning purposes and the writer does don&rsquo;t bare any responsibilty if used otherwise.</p>
 
       </article>
 
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://Skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/" data-toggle="tooltip" data-placement="top" title="Mr Robot CTF Walkthrough">&larr; Previous Post</a>
+            <a href="https://Skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" data-toggle="tooltip" data-placement="top" title="Network Security Man in the Middle(MITM) Attacks">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="https://Skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" data-toggle="tooltip" data-placement="top" title="Network Security Man in the Middle(MITM) Attacks">Next Post &rarr;</a>
-          </li>
         
       </ul>
 

@@ -5,18 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>SpyderSec Challenge</title>
-  <meta property="og:title" content="SpyderSec Challenge" />
-  <meta name="twitter:title" content="SpyderSec Challenge" />
-  <meta name="description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta property="og:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I found one directory, tried to access it but had no permissions. The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.">
-  <meta name="twitter:description" content="1 FLag: I used netdiscover to identify the IP of the machine. 192.168.0.27
-Accessed the IP on the browser
-I then used dirb directory burster to find available directories. dirb http://192.168.0.27 I …">
+  <title>What is Session Hijacking and How to Prevent It?</title>
+  <meta property="og:title" content="What is Session Hijacking and How to Prevent It?" />
+  <meta name="twitter:title" content="What is Session Hijacking and How to Prevent It?" />
+  <meta name="description" content="Session Hijacking is when an attacker interacts with a server as another user. The attack take advantage of the active session between the victim and the server. What is a session? It is time period that the communication of two system is active.
+There are two types of session hijacking,
+a) Application Level - It is the most common now days and include, ID Sniffing, Session Fixation, Session Donation.">
+  <meta property="og:description" content="Session Hijacking is when an attacker interacts with a server as another user. The attack take advantage of the active session between the victim and the server. What is a session? It is time period that the communication of two system is active.
+There are two types of session hijacking,
+a) Application Level - It is the most common now days and include, ID Sniffing, Session Fixation, Session Donation.">
+  <meta name="twitter:description" content="Session Hijacking is when an attacker interacts with a server as another user. The attack take advantage of the active session between the victim and the server. What is a session? It is time period …">
   <meta name="author" content="Stephen Kanyi"/>
   <link href='https://Skanyi.github.io/blog/img/avatar-icon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://Skanyi.github.io/blog/img/hugo.jpg" />
@@ -24,12 +22,12 @@ I then used dirb directory burster to find available directories. dirb http://19
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@StephenKanyiW" />
   <meta name="twitter:creator" content="@StephenKanyiW" />
-  <meta property="og:url" content="https://Skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <meta property="og:url" content="https://Skanyi.github.io/blog/cyber-security/what-is-session-hijacking-and-how-to-prevent-it/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kanyi Blog" />
 
   <meta name="generator" content="Hugo 0.30" />
-  <link rel="canonical" href="https://Skanyi.github.io/blog/cyber-security/spydersec-challenge/" />
+  <link rel="canonical" href="https://Skanyi.github.io/blog/cyber-security/what-is-session-hijacking-and-how-to-prevent-it/" />
   <link rel="alternate" href="https://Skanyi.github.io/blog/index.xml" type="application/rss+xml" title="Kanyi Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -173,7 +171,7 @@ I then used dirb directory burster to find available directories. dirb http://19
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="cyber-security-heading">
-              <h1>SpyderSec Challenge</h1>
+              <h1>What is Session Hijacking and How to Prevent It?</h1>
                 
                 
             </div>
@@ -191,94 +189,87 @@ I then used dirb directory burster to find available directories. dirb http://19
       <article role="main" class="blog-post">
         
 
-<p><img src="/blog/images/spydersec/thechallenge.png" alt="" /></p>
+<p><strong>Session Hijacking</strong> is when an attacker interacts with a server as another user. The attack take advantage of the active session between the victim and the server. <strong>What is a session?</strong> It is time period that the communication of two system is active.</p>
 
-<h3 id="1-flag">1 FLag:</h3>
+<p>There are two types of session hijacking,</p>
 
-<p>I used <code>netdiscover</code> to identify the IP of the machine.
-<code>192.168.0.27</code></p>
+<p>a) <strong>Application Level</strong> - It is the most common now days and include, ID Sniffing, Session Fixation, Session Donation.</p>
 
-<p>Accessed the IP on the browser</p>
+<p>b) <strong>Network Level</strong> - Due to advancement in this layer, session hijacking in network level is very low. It includes; blind hijacking, IP spoofing.</p>
 
-<p>I then used <code>dirb</code> directory burster to find available directories.
-<code>dirb http://192.168.0.27</code>
-<img src="/blog/images/spydersec/dirb.png" alt="" /></p>
+<p><strong>Session Persistence</strong> is what makes session hijacking possible. When a user login to a server, they get a token that they will use to send subsequent requests to server until that token expires. If the attacker get hold of the token, they can access all the resources that the user was able to access. Persistence is either on the cookies or in the URL.
+<strong>Session Persistence in Cookies</strong>
+Cookies can keep Session ID that are persisted on each request.
+<strong>Advantages</strong> Cookies are not logged in normal requests, session ID can be persisted even after closing the browser.
+<strong>Disadvantages</strong> It is vulnerable to cross site scripting(XSS) and you can only have one session per browser.</p>
 
-<p>I found one directory, tried to access it but had no permissions.
-<img src="/blog/images/spydersec/denied.png" alt="" /></p>
+<p><strong>Session Persistence in URL</strong>
+The session ID form part of the url. This means it is only persistence per tab and can still work if client doesn&rsquo;t accept cookies.
+<strong>Disadvantages</strong> Session IDs are sent in referrer and they are also stored in the logs.</p>
 
-<p>The application suggested that there are several clues on the page. Started by checking the page source. Had an interesting script. Didn&rsquo;t know what to do with it.
-<img src="/blog/images/spydersec/clues.png" alt="" /></p>
+<p><strong>How to Hijack Sessions in Web Applications(WA)</strong>
+We take advantage on WA session persistence mechanism.</p>
 
-<p>Inspecting the page, under cookies there was another url, tried to access it, but still had no permissions.
-<img src="/blog/images/spydersec/permissions.png" alt="" /></p>
+<ol>
+<li><p><strong>Hijacking Cookies with XSS</strong> XSS allows attackers to run malicious code on the website/client. <strong>How does it work?</strong>
+An attacker craft a url that has a script that does anything that the attacker wants, in this case sending the cookie of the victim back to the attacker when the victim clicks on the link.
+Sometimes cookies are exposed on logs depending on the framework used. You can also use google dorks to find vulnerable sites to XSS.
+<code>inurl: “search.php?q=”</code></p>
 
-<p>Took a step back to think of what i have so far, a script and a url that i cannot access. Decided to concentrate on the script as it might have a clue on how to access the url.</p>
+<p><strong>URL based session IDS</strong> are exposed in different areas, in the log files as the url are always logged. When clicking on the outbound links, the session ID is sent on the referer.</p></li>
 
-<p>After a lot of googling on online tools that i can run my js script, i finally got <a href="http://matthewfl.com/unPacker.html">http://matthewfl.com/unPacker.html</a>. I used it to run the script. I got hexadecimal string. I removed the <code>:</code>.
-<img src="/blog/images/spydersec/unpack.png" alt="" /></p>
+<li><p><strong>Session Sniffing</strong>  This is more like MITM attack, where the attacker is looking at the traffic going through the wire in open network(unencrypted connection(HTTP)) capturing a valid token/session ID. I have a detailed post on <a href="https://skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/">How to perform MITM attack.</a></p></li>
 
-<p>I tried to search for tools online to convert hexadecimal to text. I found <a href="http://www.convertstring.com/EncodeDecode/HexDecode">http://www.convertstring.com/EncodeDecode/HexDecode</a> which i used to convert to text. I later created my own python tool to convert this (I don&rsquo;t want to search for it online everytime). You can find the code here, <a href="https://github.com/andela-skanyi/Converter">Converter</a></p>
+<li><p><strong>Session Fixation</strong> As the name suggest, this is when an attacker predetermine the session ID for the victim. If the session ID is persisted on the URL, an attacker can send a link that the user will then authenticate and if the session ID remain the same the attacker will also be authenticated. If the session is persisted in the cookie, an attacker can send a link that has a javascript code that set the session ID. Ensuring that the session ID change when the user logs in can help you avoid this kind of attjack.</p></li>
 
-<p>Here I will use the tool for all the conversion.
-I copied the hex string to a file.
-<img src="/blog/images/spydersec/mulder.png" alt="" /></p>
+<li><p><strong>Session Donation</strong> Involves Social Engineering(SE) to make it possible. An attacker creates an account and send authenticated link to the victim. Convincing the victim to provide more information about their account but in reality it is not their account but attackers acccount. Users are used to be logged in different sites making it less suspicious when the user click link that they already authenticated.</p></li>
 
-<p>That looks like a file. Tried to access it with</p>
+<li><p><strong>BruteForce Session IDs</strong> Attacker can check the session ID to see if it has a pattern and try to bruteforce authenticated sessions. If session ID are incremental for example, it is very easy to check for authenticated session.</p></li>
+</ol>
 
-<p><code>http://192.168.0.2/mulder.fbi</code></p>
+<h2 id="tools-to-automate-session-hijacking-attacks">Tools to Automate Session Hijacking Attacks:</h2>
 
-<p><code>http://192.168.0.2/v/mulder.fbi</code></p>
+<pre><code>- ZAP - OWASP Zed Attack Proxy
+- Burp Suite
+- NetSparker
+- Ettercap
+- Bettercap
+</code></pre>
 
-<p>And got request not found. Then i tried the previous url. I got a pop up to save a file. Looks like i have found my first flag.
- <img src="/blog/images/spydersec/download.png" alt="" /></p>
+<h2 id="mitigating-risks-of-session-hijacking">Mitigating Risks of Session Hijacking</h2>
 
-<p>Saved the file.</p>
+<ol>
+<li><p><strong>Strong Session IDs</strong> You don&rsquo;t have to reinvent the wheel by creating your own session ids. It is better to delegate session id creation to the framework you are using.</p></li>
 
-<h3 id="2-flag">2 FLag:</h3>
+<li><p><strong>Keep Session IDs out of URL</strong> This will ensure that the id are not logged or passed in the referer when clicking outbound links.</p></li>
 
-<p>The file downloaded above was a video. Watched it with hope of finding a clue there. But there was none.
-According to the challenge, the next flag is a text file. <del>first flag (a downloadable file) which is required to find the second flag (a text file)</del>.</p>
+<li><p><strong>Don&rsquo;t Reuse Session IDs for Authentication</strong> Session fixation can be mitigated by ensuring that the ID change when a user authenticate to the system.</p></li>
 
-<p>Somehow the video has the clue to the second flag.</p>
+<li><p><strong>Flag Session ID Cookies as HTTP Only</strong> It makes the ID inaccessible via Javascript helping to mitigate XSS.</p></li>
 
-<p>I have heard that one can hide a message in another file as a secret method of communication. From what i understand, one can mount a file into another file with a key that will be used to decrypt the file. Which means only people who can rea/find the mounted file are those who have the keys.</p>
+<li><p><strong>Use TLS</strong> Using SSL is not secure anymore as it have known vulnerabilities that attackers can exploit. Using TLS ensures that referer header is not sent when clicking outbound links. DNS Spoofing and MITM Sniffing are also reduced if not stopped.</p></li>
 
-<p>I googled on wome of the tools that can be used to encrypt/decrypt data in a file. I found <code>Veracrypt</code> which was interesting.
-I followed <a href="http://www.linuxandubuntu.com/home/encrypt-data-in-linux-with-veracrypt-an-alternative-to-truecrypt">this</a> guide to install it and learned the basics on how to use it.</p>
+<li><p><strong>Flag Session ID Cookie as Secure</strong> Ensure cookies are not observed by an attacker. Setting the secure flag ensures that he cookie is not transmitted over unencrypted channel.</p></li>
 
-<p>Trying to mount the file to a disk but it required a password which I don&rsquo;t have at the moment.
-<img src="/blog/images/spydersec/mount.png" alt="" /></p>
+<li><p><strong>Expire Sessions</strong> Expiring sessions after a period of time is a good way to mitigate how long hijacked sessions are active. It help protects the users as they have to create new session to be able to access the server and the attacker will have to try to hijack the session again.</p></li>
 
-<p>Was back to page source to see if I missed the password there. There were two images there. I used exiftool that scan an image and extract all the info about the image. SpyderSecLogo.png had nothing unusual about the image content, but the Challenge.png had a hexadecimal on the comment field.
-<img src="/blog/images/spydersec/comment.png" alt="" /></p>
+<li><p><strong>Disable Sliding Session</strong> The expiration of the session is counted from the time of the last request and not when the session was created. For example, if a session expires after 30 minutes, and a user does not make any request until the 20 minute, the session will not expire for the next 30 minutes instead of 10. The problem here is that, if an attacker has hijacked the session, he/she just need to keep making request to ensure the session does not expire.</p></li>
 
-<p>Copied the the hex to a file, and removed the <code>:</code>. Used my tool again to do the conversion. I got another hex, rerun the app and got a base64 encoded string.
-I expanded my tool to decode and encode base64. I used it to decode and got a text string that looked like a password.
-<img src="/blog/images/spydersec/decode.png" alt="" /></p>
+<li><p><strong>Encourge Users to Log Out</strong> When user logout, the session is terminated and all active session that were using that session ID are terminated.</p></li>
 
-<p>Back to veracrypt and used the text as the password.
-<img src="/blog/images/spydersec/veracrypt.png" alt="" /></p>
+<li><p><strong>Reauthenticate Before Key Actions</strong> When withdrwaing money from online Escrow, it is important to reauthenticate again to ensure that it is the legit user who is making the request. That is just an example of why you might need reaunthentication like CAPTCHA, Secret Question and so on depending on the resource being requested.</p></li>
+</ol>
 
-<p>It mounted 38kb to the disk. Double clicked on the disk to open. It had a Flag.txt file. Opened the file and got a congratulations message. I had found the second flag.
-<img src="/blog/images/spydersec/flag.png" alt="" /></p>
-
-<h3 id="conclusion">Conclusion:</h3>
-
-<p>The CTF was awesome and challenging enough. I got to learn some of the tools that i added to my arsenal. I will be exploring more on how to hide messages in another file.</p>
+<h5 id="understanding-how-to-find-exploits-and-demonstarting-how-thay-can-be-exploited-is-an-amazing-combination-to-have-as-ethical-hacker-when-doing-penetration-testing">understanding how to find exploits and demonstarting how thay can be exploited is an amazing combination to have as ethical hacker when doing penetration testing.</h5>
 
       </article>
 
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://Skanyi.github.io/blog/cyber-security/mr-robot-ctf-walkthrough/" data-toggle="tooltip" data-placement="top" title="Mr Robot CTF Walkthrough">&larr; Previous Post</a>
+            <a href="https://Skanyi.github.io/blog/cyber-security/what-is-dos-how-to-perform-dos-how-to-defend-against-dos/" data-toggle="tooltip" data-placement="top" title="What Is DOS? How To Perform DOS? How To Defend Against DOS?">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="https://Skanyi.github.io/blog/cyber-security/network-security-man-in-the-middle-attacks/" data-toggle="tooltip" data-placement="top" title="Network Security Man in the Middle(MITM) Attacks">Next Post &rarr;</a>
-          </li>
         
       </ul>
 
